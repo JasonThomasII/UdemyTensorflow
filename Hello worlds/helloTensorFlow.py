@@ -1,2 +1,12 @@
 import tensorflow as tf
-print(tf.reduce_sum(tf.random.normal([1000, 1000])))
+tf.compat.v1.disable_eager_execution()
+#creating nodes
+node1 = tf.constant(3,dtype=tf.int32)
+node2 = tf.constant(3,dtype=tf.int32)
+node3 = tf.add(node1,node2)
+
+sess = tf.compat.v1.Session()
+results = sess.run(node3)
+print("Sum of node1 and node2 is", results)
+
+sess.close()
