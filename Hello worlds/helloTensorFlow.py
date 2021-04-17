@@ -7,6 +7,8 @@ node3 = tf.add(node1,node2)
 
 sess = tf.compat.v1.Session()
 results = sess.run(node3)
+print("")
 print("Sum of node1 and node2 is", results)
-
+print("Hello Tensor Flow!")
+print("")
 sess.close()
